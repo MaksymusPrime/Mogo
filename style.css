@@ -39,12 +39,49 @@ h6 {
 
 /*Intro*/
 .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
     height: 100vh;
 
     background: url("images/intro.jpg");
     background-size: cover;
     -webkit-background-size: cover;
+
+}
+
+.intro-inner {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+.intro_title {
+    color: #fff;
+    font-size: 150px;
+    font-weight: 700;
+    text-transform: uppercase; 
+    line-height: 1;
+    font-family: 'Montserrat', sans-serif;
+}
+.intro_title::after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 60px;
+    background-color: #fff;
+    margin: 60px auto;
+    
+
+}
+.intro_suptitle{
+    margin-bottom: 20px;
+    font-size: 72px;
+    color: #fff;
+    font-family: 'Kaushan Script', cursive;
+  
 
 }
 
@@ -57,6 +94,7 @@ h6 {
     right: 0;
     z-index: 1000;
     padding-top: 30px;
+    
 
 }
 
@@ -71,7 +109,7 @@ h6 {
     font-size: 30px;
     font-weight: 700;
     color: #fff;
-    
+    font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -84,7 +122,7 @@ h6 {
 .nav_link {
     color: #fff;
     text-decoration: none;
-    transition: color .2s linear;
+    transition: color .3s linear;
     display: inline-block;
     vertical-align: top;
     margin: 0 10px;
@@ -97,7 +135,8 @@ content: "";
 display: block;
 width: 100%;
 height: 3px;
-display: none;
+opacity: 0;
+transition: opacity .3s linear;
 
 background-color: #fce38a;
 position: absolute;
@@ -113,5 +152,26 @@ z-index: 1;
 }
 
 .nav_link:hover::after {
-    display: block; 
+    opacity: 1;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 30px;
+
+    border: 3px solid #fff;
+
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none; 
+
+
+}
+.btn:hover{
+    background-color: #fff;
+    color: #333;
 }
