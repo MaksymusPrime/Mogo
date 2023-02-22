@@ -266,7 +266,10 @@ hr {
     background-color: #f8f8f8;
 }
 
-
+.section--clients {
+    background: url("images/gora.png");
+    background-size: cover;
+}
 
 .section_header {
     width: 100%;
@@ -589,6 +592,11 @@ hr {
     position: relative;
 }
 
+.reviews_item1 {
+    padding-left: 265px;
+    position: relative;
+}
+
 .reviews_photo {
 
     position: absolute;
@@ -597,6 +605,16 @@ hr {
     z-index: 1;
 
 }
+
+.reviews_photo1 {
+
+    position: absolute;
+    top: -2px;
+    left: -19px;
+    z-index: 1;
+
+}
+
 
 .reviews_text {
     font-size: 24px;
@@ -693,4 +711,131 @@ hr {
 .logos {
     display: flex;
     justify-content: space-between;
+}
+
+/* Works */
+
+.works {
+    display: flex;
+
+}
+
+.works_col {
+    flex: 1 1 0;
+
+}
+
+.works_item {
+    position: relative;
+    background: linear-gradient(to bottom, #f38181, #fce38a);
+}
+
+.works_item:hover .works_image {
+    opacity: .1;
+}
+
+.works_item:hover .works_info {
+    opacity: 1;
+}
+
+.works_image {
+    transition: opacity .2s linear;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.works_info {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 0 15px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+
+    transform: translate3d(0, -50%, 0);
+    opacity: 0;
+    transition: opacity .2s linear;
+
+
+}
+
+.works_title {
+    margin-bottom: 5px;
+
+    font-size: 14px;
+    text-transform: uppercase;
+
+}
+
+.works_text {
+    font-size: 15px;
+    font-weight: 300;
+    font-style: italic;
+
+}
+
+
+
+/* Clients */
+
+.clients {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 70px;
+
+}
+
+.clients_item {
+    padding: 0 45px 0 175px;
+    width: 50%;
+    position: relative;
+    margin-bottom: 60px;
+
+
+}
+
+.clients_photo {
+
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 40px;
+    z-index: 1;
+
+}
+
+.clients_name {
+    color: #333;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.clients_prof {
+    color: #333;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 300;
+
+}
+
+.clients_text {
+
+    font-size: 15px;
+    color: #999;
+
+}
+
+.clients_text::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin: 15px 0;
 }
