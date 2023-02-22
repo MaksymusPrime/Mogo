@@ -137,6 +137,19 @@ hr {
     margin: 0 10px;
     position: relative;
 
+
+}
+
+.nav_link2 {
+    color: #fff;
+    text-decoration: none;
+    transition: color .3s linear;
+    display: inline-block;
+    vertical-align: right;
+    margin-left: 4px;
+    margin top: 2px;
+    position: relative;
+
 }
 
 .nav_link:after {
