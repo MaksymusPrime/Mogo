@@ -38,9 +38,9 @@ hr {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1230px;
     margin: auto;
-
+    padding: 0 15px;
 }
 
 /*Intro*/
@@ -147,7 +147,7 @@ hr {
     display: inline-block;
     vertical-align: right;
     margin-left: 4px;
-    margin top: 2px;
+    margin-top: 7px;
     position: relative;
 
 }
@@ -1233,4 +1233,75 @@ hr {
 
 .copyright span {
     color: #f38181;
+}
+
+/* Media */
+/* Intro */
+
+@media (max-width: 1230px) {
+
+
+
+    .intro_suptitle {
+        font-size: 52px;
+    }
+
+
+    .intro_title    {
+        font-size: 120px;
+
+    }
+}
+
+@media (max-width: 990px)  {
+    .nav {
+        font-size: 11px;
+    }
+    .intro_suptitle {
+        font-size: 32px;
+    }
+
+
+    .intro_title    {
+        font-size: 80px;
+
+    }
+    
+}
+
+@media (max-width: 770px)  {
+    .nav {
+        font-size: 8px;
+    }
+
+    .intro_suptitle {
+        font-size: 22px;
+    }
+
+
+    .intro_title    {
+        font-size: 40px;
+
+    }
+}
+
+@media (max-width: 475px)  {
+   
+    .intro_suptitle {
+        font-size: 18px;
+    }
+
+
+    .intro_title    {
+        font-size: 24px;
+
+    }
+
+    .nav {
+        display: none;
+       }
+         
+    .header_logo    {
+        display: none;
+    }
 }
