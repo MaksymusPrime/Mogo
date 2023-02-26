@@ -332,13 +332,17 @@ hr {
 /* About */
 
 .card {
+    margin: 80px -15px 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+
 
 }
 
 .card_item {
-    width: 380px;
+    width: 33.3333%;
+    padding: 0 15px;
 
 
 }
@@ -368,6 +372,8 @@ hr {
 
 .card_img img {
     display: block;
+    max-width: 100%;
+    height: auto;
     transition: opacity .1s linear;
 }
 
@@ -419,6 +425,7 @@ hr {
 
 .stat {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .stat_item {
@@ -452,16 +459,20 @@ hr {
 
 .services {
     display: flex;
+    flex-wrap: wrap;
 
 }
 
 .services_item {
-    flex: 1 1 0;
-    padding-left: 85px;
-    padding-right: 35px;
+    width: 33.3333%;
+    padding:0 35px 40px 85px;
     position: relative;
+    margin-bottom: 40px;
 
+}
 
+.service_item--border   {
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .services_icon {
@@ -497,7 +508,8 @@ hr {
 
 .devices_item {
     display: block;
-
+    max-width: 100%;
+    height: auto;
 }
 
 .devices_item--iphone {
@@ -1147,8 +1159,6 @@ hr {
 
 /* Blogs */
 
-.blogs {}
-
 .blogs_item {
     display: flex;
     margin-bottom: 30px;
@@ -1266,7 +1276,38 @@ hr {
         font-size: 80px;
 
     }
-    
+
+
+    /* Statistic */
+
+.stat {
+    justify-content: center;
+
+}
+    .stat_item {
+        flex: none;
+        width: 33.3333%;
+        border: 0;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .stat_item:last-child   {
+        border-right: 0;
+    }
+
+/* Service */
+
+.services_item  {
+    width: 50%;
+    padding-bottom: 0;
+}
+
+.service_item--border {
+    border-bottom: 0;
+}
+
+
 }
 
 @media (max-width: 770px)  {
@@ -1283,9 +1324,69 @@ hr {
         font-size: 40px;
 
     }
+/* Slider */
+    .slider_text    {
+        display: none;
+    }
+
+/* Section */
+
+.section {
+    padding: 40px 0;
 }
 
-@media (max-width: 475px)  {
+.section--devices   {
+    padding-bottom: 0;
+}
+
+/* Cards */
+.card   {
+    justify-content: center;
+    margin-top: 0;
+}
+
+
+.card_item  {
+    width: 100%;
+    max-width: 410px;
+    margin-bottom: 30px;
+    
+}
+.card_item:last-child  {
+    width: 100%;
+    max-width: 410px;
+    margin-bottom: 0;
+}
+/* Stat */
+.stat_count {
+    font-size: 45px;
+
+}
+
+/* Service */
+
+.services_item  {
+    width: 100%;
+    padding-bottom: 0;
+    justify-content: center;
+}
+
+/* Devices */
+
+.devices {
+    max-width: 450px;
+}
+
+.devices_item--iphone   {
+    width: 180px;
+    bottom: -50px;
+    left: 310px;
+}
+
+
+}
+
+@media (max-width: 500px)  {
    
     .intro_suptitle {
         font-size: 18px;
@@ -1304,4 +1405,46 @@ hr {
     .header_logo    {
         display: none;
     }
+
+/* Section */
+
+.section_header {
+    margin-bottom: 50px;
+}
+
+.section_title  {
+    font-size: 24px;
+    }
+
+    .section_suptitle  {
+        font-size: 19px;
+        }
+
+  .section_title::after {
+    margin: 20px auto;
+  }      
+
+
+/* Statistic */
+.stat_item {
+    width: 100%;
+    border-bottom: 1px solid #b5eae0;
+}
+
+.stat_count {
+    font-size: 40px;
+}
+
+/* Devices */
+
+.devices {
+    max-width: 250px;
+}
+
+.devices_item--iphone   {
+    width: 100px;
+    bottom: -30px;
+    left: 170px;
+}
+
 }
