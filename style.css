@@ -50,6 +50,8 @@ hr {
     justify-content: center;
     width: 100%;
     height: 100vh;
+    min-height: 820px;
+    position: relative;
 
     background: url("images/intro.jpg");
     background-size: cover;
@@ -102,9 +104,26 @@ hr {
     left: 0;
     right: 0;
     z-index: 1000;
-    padding-top: 30px;
+    padding-top: 10px;
 
 
+}
+
+.header--fixed  {
+    
+    background: linear-gradient(to bottom, #f38181, #fce38a);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    
+    transform: translate3d(0 0 0);
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .3);
+}
+
+.header.active {
+    background-color: #f38181;
 }
 
 .header__inner {
@@ -181,6 +200,81 @@ hr {
 .nav_link.active {
     color: #fce38a;
 }
+
+/* Nav Toggle */
+.nav-toggle{
+    width: 30px;
+    padding: 10px 0;
+
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 1;
+
+    font-size: 0;
+    color: transparent;
+
+    border: 0;
+    background: none;
+    cursor: pointer;
+
+    display: none;
+
+}
+.nav-toggle_item    {
+    display: block;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+
+    background-color: #fff;
+    transition: background .4s linear;
+    
+}
+
+.nav-toggle_item::before, 
+.nav-toggle_item::after    {
+    content: "";
+    width: 100%;
+    height: 3px;
+
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    z-index: 1;
+    transition: transform .4s linear;
+} 
+
+.nav-toggle_item::before    {
+    top: -8px;
+
+}
+
+.nav-toggle_item::after     {
+    top: 8px;
+}
+
+.nav-toggle.active .nav-toggle_item {
+    background: none;
+
+}
+
+.nav-toggle.active .nav-toggle_item::before {
+    transform-origin: left top;
+    transform: rotate(45deg) translateX(-2px);
+    
+}
+
+.nav-toggle.active .nav-toggle_item::after {
+    transform-origin: left bottom;
+    transform: rotate(-45deg) translateX(-3px);
+}
+
 
 /* Button */
 .btn {
@@ -524,11 +618,14 @@ hr {
 
 .wedo {
     display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
 
 }
 
 .wedo_item {
     width: 50%;
+    padding: 0 15px;
 
 }
 
@@ -538,6 +635,12 @@ hr {
     border: 1px solid #e5e5e5;
     margin-bottom: 10px;
 
+}
+
+.wedo_img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .accordion_item.active .accordion_content {
@@ -629,7 +732,7 @@ hr {
 }
 
 .reviews_photo {
-
+    display: block;
     position: absolute;
     top: 40px;
     left: 40px;
@@ -638,7 +741,7 @@ hr {
 }
 
 .reviews_photo1 {
-
+    display: block;
     position: absolute;
     top: -2px;
     left: -19px;
@@ -742,6 +845,21 @@ hr {
 .logos {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 0 -15px;
+}
+
+.logos_item {
+    display: block;
+    padding: 0 20px 0 20px;
+    max-width: 100%;
+    margin: 0 auto;
+ 
+}
+
+.logos_img  {
+    display: block;
+    width: 100%;
 }
 
 /* Works */
@@ -1023,10 +1141,16 @@ hr {
 .footer_inner {
     padding-bottom: 65px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-
+    margin: 0 -15px;
 
 }
+
+.footer_col {
+    padding: 0 15px;
+}
+
 
 .footer_col--first {
     width: 40%;
@@ -1037,7 +1161,7 @@ hr {
 }
 
 .footer_col--third {
-    width: 22.5%;
+    width: 22%;
 }
 
 .footer_logo {
@@ -1205,28 +1329,28 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
 }
 
-
 .instagram_item {
-    width: 33.3333%;
-    flex: 1 1 0;
+    width: 33%;
     border-bottom: 1px solid #fff;
-
-
-
 }
 
 .instagram_item img {
     display: block;
+   width: 100%;
+   height: auto;
 }
+    
+    
+    
 
-.Vp {
+.Vm {
     margin-top: 10px;
     font-style: italic;
     font-weight: 300;
     font-size: 13px;
+    padding: 10px;
 }
 
 /* Copyright */
@@ -1261,12 +1385,16 @@ hr {
         font-size: 120px;
 
     }
+
+    .reviews_text {
+        font-size: 20px;
+    }
+    
 }
 
 @media (max-width: 990px)  {
-    .nav {
-        font-size: 11px;
-    }
+    
+    
     .intro_suptitle {
         font-size: 32px;
     }
@@ -1306,13 +1434,103 @@ hr {
 .service_item--border {
     border-bottom: 0;
 }
+/* Reviews */
+.reviews    {
+    padding: 0 60px
+}
+
+.reviews_text {
+    font-size: 18px;
+}
+
+.reviews_photo  {
+    width: 55px;
+    height: 52px;
+  
+}
+
+.reviews_photo1  {
+    width: 150px;
+    height: 150px;
+    left: 38px;
+  
+}
+
+.reviews_item   {
+    padding-left: 175px;
+}
 
 
+/* Works */
+
+.works_title    {
+    font-size: 13px;
+}
+
+.works_text {
+    font-size: 12px;
+}
+
+/* Clients */
+
+.clients_item   {
+    width: 100%;
+}
+
+/* Footer */
+
+.footer_col--first  {
+    width: 100%;
+}
+
+.footer_col--second  {
+    width: 50%;
+}
+
+.footer_col--third  {
+    width: 50%;
+    
+}
+
+ /* Instagram */
+ .instagram {
+    justify-content: flex-start;
+}
+
+.instagram_item {
+    width: auto;
+    border-right: 1px solid white;
+}
 }
 
 @media (max-width: 770px)  {
+/* Intro */
+    .intro {
+        min-height: 650px;
+    }
+/* Nav */
     .nav {
-        font-size: 8px;
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: linear-gradient(to bottom, #f38181, #fce38a);
+    }
+
+    .nav-toggle{
+        display: block;;
+    }
+
+    .nav_link   {
+        display: block;
+        margin: 0;
+        padding: 8px 20px;
+
+    }
+
+    .nav_link2  {
+        margin-left: 25px;
     }
 
     .intro_suptitle {
@@ -1324,6 +1542,13 @@ hr {
         font-size: 40px;
 
     }
+
+/* Header */
+
+.header {
+    padding: 0 10px;
+}
+
 /* Slider */
     .slider_text    {
         display: none;
@@ -1383,10 +1608,124 @@ hr {
     left: 310px;
 }
 
+/* WEDO */
+
+.wedo_img   {
+    display: none;
+    
+}
+
+.wedo_item {
+    width: 100%;
+}
+/* Reviews */
+
+.reviews_photo  {
+    position: static;
+    margin: 0 auto 20px;
+    
+
+}
+.reviews_photo1  {
+    position: static;
+    margin: 0 auto 20px;
+    
 
 }
 
+.reviews_item   {
+    padding-left: 0;
+}
+
+.reviews_item1   {
+    padding-left: 0;
+}
+
+.reviews_text {
+    font-size: 16px;
+}
+
+.reviews_author {
+    font-size: 20px;
+}
+
+/* Works */
+
+.works {
+    flex-wrap: wrap;
+}
+
+.works_col  {
+    flex: none;
+    width: 50%;
+}
+
+.works_title    {
+    font-size: 11px;
+}
+
+.works_text {
+    font-size: 10px;
+}
+
+/* Clients */   
+
+.clients_photo  {
+    position: static;
+
+}
+
+.clients_item   {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+.clients_text::before   {
+    margin: 15px auto;
+}
+
+
+/* Blog */
+
+.blog {
+    flex-wrap: wrap;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+.blog_item {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.blog_item:last-child {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+/* Footer */
+
+.footer_col--first  {
+    width: 100%;
+}
+
+.footer_col--second  {
+    width: 100%;
+}
+
+.footer_col--third  {
+    width: 100%;
+    
+}
+
+}
+
+
 @media (max-width: 500px)  {
+
+
+ 
    
     .intro_suptitle {
         font-size: 18px;
@@ -1447,4 +1786,55 @@ hr {
     left: 170px;
 }
 
+/* Reviews */
+.reviews_text {
+    font-size: 14px;
+}
+
+/* Works */
+
+.works_col  {
+    flex: none;
+    width: 100%;
+}
+
+
+/* BLogs */
+
+.blogs_title {
+    font-size: 10px;
+}
+
+.blogs_image {
+    width: 80px;
+    height: 50px;
+}
+
+/* Instagram */
+.instagram {
+        justify-content: center;
+
+}
+
+/* Subscribe */
+
+.subscribe  {
+    flex-wrap: wrap;
+    max-width: none;
+}
+
+.subscribe_input,.subscribe_btn {
+    width: 100%;
+
+} 
+
+.subscribe_input    {
+    margin-bottom: 10px;
+    border-right: 1px solid #e7e7e7;
+}
+
+/* Footer */
+.footer_logo, .footer_text    {
+    text-align: center;
+}
 }
