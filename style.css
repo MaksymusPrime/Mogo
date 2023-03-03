@@ -182,7 +182,7 @@ hr {
     width: 100%;
     height: 3px;
     opacity: 0;
-    transition: opacity .3s linear;
+    transition: opacity .4s linear;
 
     background-color: #fce38a;
     position: absolute;
