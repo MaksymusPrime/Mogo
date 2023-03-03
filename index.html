@@ -27,18 +27,18 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="header"> 
         <div class="container">
             <div class="header__inner">
-                <div class="header_logo">MoGo</div>
+                <div class="header_logo " data-scroll="#intro">MoGo</div>
 
-                <nav class="nav">
+                <nav class="nav" id="nav">
 
-                    <a class="nav_link" href="#">About</a>
-                    <a class="nav_link" href="#"> Service</a>
-                    <a class="nav_link" href="#"> Work</a>
-                    <a class="nav_link" href="#"> Blog</a>
-                    <a class="nav_link" href="#">Contact</a>
+                    <a class="nav_link" href="#" data-scroll="#about">About</a>
+                    <a class="nav_link" href="#" data-scroll="#service"> Service</a>
+                    <a class="nav_link" href="#" data-scroll="#work"> Work</a>
+                    <a class="nav_link" href="#"data-scroll="#blog"> Blog</a>
+                    <a class="nav_link" href="#" data-scroll="#contact">Contact</a>
                     <a class="nav_link" href="#">
                         <i class="gg-shopping-cart"></i>
                     </a>
@@ -48,7 +48,7 @@
 
                 </nav>
                 
-                <button class="nav-toggle" type="button">
+                <button class="nav-toggle" id="nav-toggle" type="button">
                     <span class="nav-toggle_item">Menu</span>
                 </button>
             </div>
@@ -58,7 +58,7 @@
 
 
 
-    <div class="intro">
+    <div class="intro" id="intro">
         <div class="container">
             <div class="intro-inner">
                 <h2 class="intro_suptitle">Creative Template</h2>
@@ -90,7 +90,7 @@
         </div>
     </div>
 
-    <section class="section">
+    <section class="section" id="about">
         <div class="container">
             <div class="section_header">
                 <h3 class="section_suptitle">What we do</h3>
@@ -222,7 +222,7 @@
 
     <!-- end of section -->
 
-    <section class="section">
+    <section class="section" id="service">
         <div class="container">
             <div class="section_header">
                 <h3 class="section_suptitle">Service</h3>
@@ -240,11 +240,11 @@
                 <div class="wedo_item">
                     <div class="accordion">
                         <div class="accordion_item">
-                            <div class="accordion_header">
+                            <div class="accordion_header" data-collapse="#wedo_1">
                                 <div class="accordion_tittle">Photography</div>
                                 <img class="accordion_icon" src="images/PICTURE.png"></img>
                             </div>
-                            <div class="accordion_content">
+                            <div class="accordion_content" id="wedo_1">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                                     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
@@ -254,11 +254,11 @@
                             </div>
                         </div>
                         <div class="accordion_item active">
-                            <div class="accordion_header">
+                            <div class="accordion_header" data-collapse="#wedo_2">
                                 <div class="accordion_tittle">Creativity</div>
                                 <img class="accordion_icon" src="images/EQUALIZER.png"></img>
                             </div>
-                            <div class="accordion_content">
+                            <div class="accordion_content" id="wedo_2">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                                     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
@@ -268,11 +268,11 @@
                             </div>
                         </div>
                         <div class="accordion_item">
-                            <div class="accordion_header">
+                            <div class="accordion_header" data-collapse="#wedo_3">
                                 <div class="accordion_tittle">Web Design</div>
                                 <img class="accordion_icon" src="images/BULLSEYE.png"></img>
                             </div>
-                            <div class="accordion_content">
+                            <div class="accordion_content" id="wedo_3">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                                     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
@@ -423,7 +423,7 @@
         </div>
     </div>
 
-    <section class="section">
+    <section class="section" id="work">
         <div class="container">
             <div class="section_header">
                 <h3 class="section_suptitle">What we do</h3>
@@ -573,7 +573,7 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="blog">
         <div class="container">
             <div class="section_header">
                 <h3 class="section_suptitle">Our stories</h3>
@@ -675,7 +675,7 @@
             </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="container">
             <div class="footer_inner">
                 <div class="footer_col footer_col--first">
@@ -798,6 +798,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="app.js"></script>
 
 </body>
 
